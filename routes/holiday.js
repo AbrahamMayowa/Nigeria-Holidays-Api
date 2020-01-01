@@ -6,7 +6,7 @@ const postHoliday = require('../controllers/postHoliday')
 
 router.get('/holidays', getHoliday.getHoliday)
 
-router.post('/holidays/create', [
+router.post('/holiday/create', [
     body('holidayType').isString().trim().isLength({min: 3}),
     body('religion').isLength({min: 3}).isString().trim(),
     body('generalHoliday').isLength({min: 3}).isString().trim(),
